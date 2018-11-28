@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Events</title>
+    <style>
+      body {
+        border: 2px solid blue;
+        margin: 0 auto;
+        padding: 0 auto;
+        max-width: 50%;
+        border-radius: 12px;
+      }
+      div {
+        border: 1px dotted grey;
+        text-align: center;
+        max-width: 50%;
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div id="one">One</div>
+      <div id="two">Two</div>
+      <div id="three">Three</div>
+    </section>
+
+    <script>
+      const section = document.querySelector("section");
+      //Print the selected target
+      section.addEventListener("click", event => {
+        var newElement = document.createElement("div");
+        newElement.innerText = event.target;
+        document.body.appendChild(newElement);
+      });
+    </script>
+  </body>
+</html>
